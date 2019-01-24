@@ -103,4 +103,12 @@ public class Questao2 {
 		scanner.close();
 	}
 
+	public void setTamanho(int tamanho) {
+		this.tamanho = tamanho;
+	}
+
+	public void setValores(int[] valores) {
+		this.valores = valores;
+	}
+
 }
