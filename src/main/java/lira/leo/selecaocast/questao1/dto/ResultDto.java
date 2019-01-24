@@ -8,6 +8,11 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Classe responsável pelo retorno do método de comparação 
+ *  
+ * @author leonardo.lira
+ */
 @JsonInclude(Include.NON_NULL)
 public class ResultDto {
 

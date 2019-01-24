@@ -16,6 +16,13 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
+/**
+ * Classe responsável por encapsular os erros retornados pelos endpoints
+ * 
+ * @author leonardo.lira
+ *
+ */
 @JsonPropertyOrder({"statusHttp","mensagemStatusHttp","metodoHttp","urlEntrada","parametros","dataErro","urlErro","mensagemErro","excecao"})
 @JsonInclude(Include.NON_NULL)
 public class RestError implements Serializable {

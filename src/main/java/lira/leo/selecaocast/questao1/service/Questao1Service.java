@@ -22,6 +22,11 @@ import lira.leo.selecaocast.questao1.dto.ResultDto;
 import lira.leo.selecaocast.questao1.exception.DataRequiredException;
 import lira.leo.selecaocast.questao1.service.util.FileSide;
 
+/**
+ * Método utilizado para delatar os arquivos físicos 
+ * 
+ * @param id identificador unico para o processo de remoção
+ */
 @Service
 public class Questao1Service implements IQuestao1Service {
 
@@ -96,6 +101,9 @@ public class Questao1Service implements IQuestao1Service {
 		
 	}
 	
+	/* (non-Javadoc)
+	 * @see leo.lira.cast.questao1.service.IQuestao1Service#deleteDataFiles(java.lang.String)
+	 */
 	public void deleteDataFiles(String id){
 		File left = new File(FILE_PREFIX + FileSide.LEFT.getSide() + "-" + id + ".bin");
 		File right = new File(FILE_PREFIX + FileSide.RIGHT.getSide() + "-" + id + ".bin");

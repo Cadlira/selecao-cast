@@ -14,6 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 import lira.leo.selecaocast.questao1.service.IQuestao1Service;
 import lira.leo.selecaocast.questao1.service.util.FileSide;
 
+/**
+ * Classe responsável por prover os endpoints solictados pela questão 01 do processo de seleção da Cast  
+ * 
+ * @author leonardo.lira
+ */
 @RestController
 @RequestMapping("/v1")
 public class Questao1Controller {

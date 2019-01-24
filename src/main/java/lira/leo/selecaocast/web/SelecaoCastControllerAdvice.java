@@ -11,9 +11,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import lira.leo.selecaocast.questao1.exception.DataRequiredException;
 import lira.leo.selecaocast.web.exception.RestError;
 
+/**
+ * Classe responsável por interceptar os erros lançados pelos endpoints
+ * 
+ * @author leonardo.lira
+ *
+ */
 @ControllerAdvice
 public class SelecaoCastControllerAdvice {
 
+	/**
+	 * Método responsável por tratar as exceções genericas
+	 * 
+	 * @param request 
+	 * @param response
+	 * @param e exceção capturada
+	 * @return
+	 * 		{@link RestError} - objeto com os dados do erro capturado
+	 */
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public RestError exception(HttpServletRequest request, HttpServletResponse response, Exception e) {
@@ -23,6 +38,16 @@ public class SelecaoCastControllerAdvice {
 		restError.setMensagemStatusHttp(HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase());	
 		return restError;
 	}
+	
+	/**
+	 * Método responsável por tratar as exceções do tipo @see {@link DataRequiredException}
+	 * 
+	 * @param request 
+	 * @param response
+	 * @param e exceção capturada
+	 * @return
+	 * 		{@link RestError} - objeto com os dados do erro capturado
+	 */
 	@ExceptionHandler(DataRequiredException.class)
 	@ResponseBody
 	public RestError dataRequiredException(HttpServletRequest request, HttpServletResponse response, Exception e) {
