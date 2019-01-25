@@ -22,6 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 import lira.leo.selecaocast.questao3.domain.Person;
 import lira.leo.selecaocast.questao3.service.IPersonService;
 
+/**
+ * Classe responsável pelos endpoins do CRUD de pessoa
+ * 
+ * @author leonardo.lira
+ *
+ */
 @RestController
 @RequestMapping("/rest")
 public class PersonController {

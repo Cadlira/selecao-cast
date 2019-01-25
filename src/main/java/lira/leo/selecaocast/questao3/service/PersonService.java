@@ -9,6 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 import lira.leo.selecaocast.questao3.dao.IPersonDao;
 import lira.leo.selecaocast.questao3.domain.Person;
 
+/**
+ * Classe responsável pela regra de negócio do CRUD de pessoa
+ * 
+ * @author leonardo.lira
+ *
+ */
 @Service
 @Transactional
 public class PersonService implements IPersonService {

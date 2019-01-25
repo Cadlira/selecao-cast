@@ -3,11 +3,24 @@ package lira.leo.selecaocast.questao2;
 import java.util.Scanner;
 import java.util.TreeSet;
 
+/**
+ * Classe criada para executar a resolução da questão 02 do prcesso de seleção da Cast Group
+ * 
+ * A solução desse questão foi realizada utilizando o terminal do java para input de dados.
+ * 
+ * @author leonardo.lira
+ *
+ */
 public class Questao2 {
 
 	private int tamanho;
 	private int[] valores;
 
+	/**
+	 * Inicia a solução do problema levantado pela questão 02
+	 * 
+	 * @param scanner
+	 */
 	public void iniciarQuestao2(Scanner scanner) {
 		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
 
@@ -29,6 +42,11 @@ public class Questao2 {
 
 	}
 
+	/**
+	 * Calcular a resolucao do problema
+	 * 
+	 * @return
+	 */
 	public int calcularResposta() {
 		TreeSet<Integer> resultado = new TreeSet<Integer>();
 		for (int i=1; i<this.tamanho;i++){
@@ -46,6 +64,11 @@ public class Questao2 {
 		return resultado.last();
 	}
 
+	/**
+	 * Carrega os valores do array de acordo com o tamanho informado
+	 * 
+	 * @param scanner
+	 */
 	private void carregarValores(Scanner scanner) {
 		System.out.println("\n\n");
 		this.valores = new int[this.tamanho];
@@ -61,6 +84,11 @@ public class Questao2 {
 
 	}
 
+	/**
+	 * Carrega o tamanho do array
+	 * 
+	 * @param scanner
+	 */
 	private void carregarTamanho(Scanner scanner) {
 		boolean valido = false;
 		do {
@@ -73,6 +101,15 @@ public class Questao2 {
 		} while (!valido);
 	}
 
+	/**
+	 * Lê um valor inteiro do console, exibindo uma mensagem.
+	 * 
+	 * Caso o valor não seja um número é exibido um erro
+	 * 
+	 * @param texto
+	 * @param scanner
+	 * @return
+	 */
 	private int getInt(String texto, Scanner scanner) {
 		System.out.print(texto);
 		String val = scanner.next();
@@ -86,6 +123,12 @@ public class Questao2 {
 		}
 	}
 
+	/**
+	 * Verifica se uma string é um inteiro
+	 * 
+	 * @param numero
+	 * @return
+	 */
 	private boolean isInt(String numero) {
 		try {
 			Integer.parseInt(numero);

@@ -23,9 +23,10 @@ import lira.leo.selecaocast.questao1.exception.DataRequiredException;
 import lira.leo.selecaocast.questao1.service.util.FileSide;
 
 /**
- * Método utilizado para delatar os arquivos físicos 
+ * Classe contendo a regra de negócio da questão 01
  * 
- * @param id identificador unico para o processo de remoção
+ * @author leonardo.lira
+ *
  */
 @Service
 public class Questao1Service implements IQuestao1Service {

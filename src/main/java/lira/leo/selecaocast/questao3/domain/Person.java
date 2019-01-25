@@ -8,6 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+/**
+ * Classe de dominio referente a pessoa
+ * 
+ * @author leonardo.lira
+ *
+ */
 @Entity
 @Table(schema="cast", name="person")
 public class Person {
