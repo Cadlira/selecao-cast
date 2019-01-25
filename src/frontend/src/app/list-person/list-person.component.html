@@ -1,0 +1,35 @@
+<div class="col-md-12">
+  <h2> Pessoas</h2>
+  <button class="btn btn-danger" (click)="addPerson()"> Nova Pessoa</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Celular</th>
+      <th>Endereço</th>
+      <th>Bairro</th>
+      <th>Número</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let person of people">
+      <td class="hidden">{{person.id}}</td>
+      <td>{{person.name}}</td>
+      <td>{{person.phone}}</td>
+      <td>{{person.cellphone}}</td>
+      <td>{{person.street}}</td>
+      <td>{{person.number}}</td>
+      <td>{{person.neighborhood}}</td>
+      <td>{{person.city}}</td>
+      <td>{{person.state}}</td>
+      <td><button class="btn btn-danger" (click)="deletePerson(person)"> Remover</button>
+        <button class="btn btn-primary" (click)="editPerson(person)" style="margin-left: 20px;"> Editar</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
