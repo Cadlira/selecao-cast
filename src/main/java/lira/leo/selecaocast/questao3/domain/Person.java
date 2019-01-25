@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
  * Classe de dominio referente a pessoa
  * 
@@ -53,6 +56,22 @@ public class Person {
 	@Size(max = 255)
 	@Column
 	private String state;
+
+	public Person(){}
+	
+	public Person(long id, String name, String phone, String cellphone,
+			String street, String number, String neighborhood,
+			String city, String state) {
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+		this.cellphone = cellphone;
+		this.street = street;
+		this.number = number;
+		this.neighborhood = neighborhood;
+		this.city = city;
+		this.state = state;
+	}
 
 	public long getId() {
 		return id;
@@ -124,5 +143,18 @@ public class Person {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+	
+	@Override
+	public String toString() {
+		ObjectMapper mapper = new ObjectMapper();
+		
+		try {
+			return mapper.writeValueAsString(this);
+		} catch (JsonProcessingException e) {			
+			e.printStackTrace();
+		}
+		
+		return super.toString();
 	}
 }
